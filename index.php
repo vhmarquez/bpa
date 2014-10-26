@@ -1,6 +1,6 @@
-<? include('config.php'); $page = $_REQUEST['page']; ?>
+<?php include('config.php'); $page = $_REQUEST['page']; ?>
 
-<? session_start(); ?>
+<?php session_start(); ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -86,17 +86,17 @@
 
             <ul>
 
-                <li><a href="<?=$homeLnk?>">Home</a></li>
+                <li><a href="<?php echo $homeLnk?>">Home</a></li>
 
-                <li><a href="<?=$enviroLnk?>">Our Environment</a></li>
+                <li><a href="<?php echo $enviroLnk?>">Our Environment</a></li>
 
-                <li><a href="<?=$helpLnk?>">How can I help?</a></li>
+                <li><a href="<?php echo $helpLnk?>">How can I help?</a></li>
 
-                <li><a href="<?=$articleLnk?>">Videos / Articles</a></li>
+                <li><a href="<?php echo$articleLnk?>">Videos / Articles</a></li>
 
-                <li><a href="<?=$faqLnk?>">FAQ'S</a></li>
+                <li><a href="<?php echo $faqLnk?>">FAQ'S</a></li>
 
-                <li><a href="<?=$contactLnk?>">Contact Us</a></li>
+                <li><a href="<?php echo $contactLnk?>">Contact Us</a></li>
 
                 <?php if($_SESSION['admin'] == "yes") {
 
@@ -136,7 +136,7 @@
 
                 	<tr valign="top">
 
-                    <?
+                    <?php
 
 						if(isset($page) && $page != 'home')
 
@@ -146,7 +146,7 @@
 
                     	
 
-						<?
+						<?php
 
                             if(isset($page))
 
@@ -156,11 +156,11 @@
 
                                     <td style="width: 800px; padding: 0px;">
 
-                                        <? include('home.php'); ?>
+                                        <?php include('home.php'); ?>
 
                                     </td>
 
-                                    <?
+                                    <?php
 
                                 }
 
@@ -168,11 +168,11 @@
 
 								<td style="width: 600px; padding: 0px;">
 
-                                	<? include($page.'.php'); ?>
+                                	<?php include($page.'.php'); ?>
 
                                 </td>
 
-                                <?
+                                <?php
 
                                 }
 
@@ -182,11 +182,11 @@
 
                         	<td style="width: 800px; padding: 0px 20px 0px 0px;">
 
-                           		<? include('home.php'); ?>
+                           		<?php include('home.php'); ?>
 
                             </td>
 
-                            <?
+                            <?php
 
 							}
 
