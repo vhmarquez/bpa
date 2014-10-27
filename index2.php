@@ -28,16 +28,17 @@
 		<!-- Navigation -->
 		<div id="nav">
 			<ul>
-				<li><a href="<?=$homeLnk?>">Home</a></li>
-				<li><a href="<?=$enviroLnk?>">Our Environment</a></li>
-				<li><a href="<?=$helpLnk?>">How can I help?</a></li>
-				<li><a href="<?=$articleLnk?>">Videos / Articles</a></li>
-				<li><a href="<?=$faqLnk?>">FAQ'S</a></li>
-				<li><a href="<?=$contactLnk?>">Contact Us</a></li>
-				<? if($_SESSION['admin'] == "yes") {
-					echo "<li><a href=\"$u_homeLnk\">Admin</a></li>";
+				<li><a href="<?php echo $homeLnk?>">Home</a></li>
+				<li><a href="<?php echo $enviroLnk?>">Our Environment</a></li>
+				<li><a href="<?php echo $helpLnk?>">How can I help?</a></li>
+				<li><a href="<?php echo $articleLnk?>">Videos / Articles</a></li>
+				<li><a href="<?php echo $faqLnk?>">FAQ'S</a></li>
+				<li><a href="<?php echo $contactLnk?>">Contact Us</a></li>
+				<?php
+				if($_SESSION['admin'] == "yes") {
+					echo "<li><a href=\"".$u_homeLnk."\">Admin</a></li>";
 				} else {
-					 echo "<li><a href=\"$loginLnk\">Login</a></li>";
+					 echo "<li><a href=\"".$loginLnk."\">Login</a></li>";
 				}
 				?>
 			</ul>
@@ -46,7 +47,8 @@
 		<!-- Content -->
 		<div id="content">
 			<div id="content_container">
-			<? if($_SESSION['admin'] == "yes") {
+			<?php
+			if($_SESSION['admin'] == "yes") {
 
 			echo "
 				<div id='user_container'>
@@ -61,9 +63,9 @@
 					</div>
 					<div id='user_buttons'>
 						<ul>
-							<li><a href='$u_homeLnk'>Home</a></li>
-							<li><a href='$addLnk'>Add Content</a></li>
-							<li style='margin-right: 0px;'><a href='$logoutLnk'>Logout</a></li>
+							<li><a href='".$u_homeLnk."'>Home</a></li>
+							<li><a href='".$addLnk."'>Add Content</a></li>
+							<li style='margin-right: 0px;'><a href='".$logoutLnk."'>Logout</a></li>
 						</ul>
 					</div>
 					<div id='user_content'>
